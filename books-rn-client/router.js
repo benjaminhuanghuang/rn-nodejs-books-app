@@ -12,7 +12,7 @@ import EditBook from './screens/EditBook'
 
 let screen = Dimensions.get('window');
 
-export const Tabs = createBottomTabNavigator({
+export const TabsNav = createBottomTabNavigator({
   'Bookcase': {
     screen: Bookcase,
     navigationOptions: {
@@ -51,7 +51,7 @@ export const Tabs = createBottomTabNavigator({
   },
 });
 
-export const BookcaseStack = createStackNavigator({
+export const BookcaseStackNav = createStackNavigator({
   Bookcase: {
     screen: Bookcase,
     navigationOptions: ({ navigation }) => ({
@@ -71,13 +71,13 @@ export const BookcaseStack = createStackNavigator({
 export const AppNavigator = createStackNavigator(
   {
     Tabs: {
-      screen: Tabs,
+      screen: TabsNav,
       navigationOptions: ({ navigation }) => ({
         gesturesEnabled: false,
       })
     },
     BookcaseStack: {
-      screen: BookcaseStack,
+      screen: BookcaseStackNav,
       navigationOptions: ({ navigation }) => ({
         gesturesEnabled: false,
       })
