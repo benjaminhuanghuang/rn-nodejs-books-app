@@ -18,6 +18,16 @@ CREATE TABLE db_books.books (
 ENGINE=InnoDB
 DEFAULT CHARSET=utf8
 COLLATE=utf8_general_ci;
+
+
+ALTER TABLE db_books.books ADD author varchar(255) NULL;
+ALTER TABLE db_books.books ADD image varchar(255) NULL;
+ALTER TABLE db_books.books ADD dateAdded varchar(255) NULL;
+ALTER TABLE db_books.books ADD dateFinished varchar(255) NULL;
+ALTER TABLE db_books.books ADD summary MEDIUMTEXT NULL;
+ALTER TABLE db_books.books ADD starRating int(5) NULL;
+ALTER TABLE db_books.books ADD deleted TINYINT(4) NULL;
+
 ```
 
 
